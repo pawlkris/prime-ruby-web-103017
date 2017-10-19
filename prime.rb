@@ -4,11 +4,10 @@ def prime?(number)
     return false
   elsif number <= 3
     return true
-  elsif number % 2 == 0
-    return false
-  elsif number % 3 == 0
-    return false
-  else
-    return true
+  end
+  for x in (2..sqrt(number))
+    if number % x == 0
+      return false
+    end
   end
 end
