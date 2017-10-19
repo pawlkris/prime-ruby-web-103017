@@ -5,7 +5,7 @@ def prime?(number)
   elsif number <= 3
     return true
   end
-  for x in (2..sqrt(number))
+  for x in (2..number.sqrt)
     if number % x == 0
       return false
     end
